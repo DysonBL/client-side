@@ -1,23 +1,22 @@
-import styled,{css} from "styled-components";
+import styled from "styled-components";
 
 export default styled.div`
   font-family: sans-serif;
 
   h1 {
     text-align: center;
-    color:blue;
+    color: blue;
     padding: 10px;
     font-weight: 700;
-    font-size:2rem;
-    
+    font-size: 2rem;
   }
-  Form{
+  Form {
     text-align: center;
     padding: 40px;
     font-weight: 800;
   }
-  form{
-    top:5rem;
+  form {
+    top: 1rem;
     max-width: 500px;
     margin: 10px auto;
     border: 1px solid #ccc;
@@ -26,8 +25,32 @@ export default styled.div`
     border-radius: 3px;
     position: relative;
   }
-.lable{
-  color:blue;
-}
+  .lable {
+    color: blue;
+    margin: 1rem;
   }
-    `
+  Button {
+    margin: 1rem;
+  }
+  input {
+    color: green;
+    font-size: 1rem;
+  }
+span{
+  color:red;
+}
+`;
+//Advanced styled components
+const Button = styled.button`
+   font-sixe:1rem;
+   color:red;
+   margin:5rem; 
+   border-radious:3px;
+   color: ${props => props.theme.main};
+   border:3px solid ${props=>props.theme.main};
+`;
+Button.defaultProps={
+  theme:{
+    main:"palevioletred"
+  }
+}
